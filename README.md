@@ -13,15 +13,19 @@ Current System The mill's electrical distribution system consists of:
 
 *Calculation of Required Capacitor Bank Rating:
 The goal is to improve the power factor (PF) from 0.65 lagging to 0.95 lagging.
+
 Given:
 •	Active power (P) = 5 MW = 5000 kW
 •	Initial PF (cosφ₁) = 0.65 → φ₁ = 49.46°, tanφ₁ = 1.169
 •	Desired PF (cosφ₂) = 0.95 → φ₂ = 18.19°, tanφ₂ = 0.329
+
 *Reactive Power Calculation:
 •	Initial reactive power (Q₁) = P × tanφ₁ = 5000 × 1.169 = 5845 kVAR
 •	Desired reactive power (Q₂) = P × tanφ₂ = 5000 × 0.329 = 1645 kVAR
 •	Required capacitive kVAR (Qc) = Q₁ - Q₂ = 5845 - 1645 = 4200 kVAR
+
 Existing Capacitor Bank:
 •	Additional kVAR needed: 4200 
+
 *Recommendation:
 Install a new capacitor bank of 4200 kVAR at the 6.6 kV bus.
