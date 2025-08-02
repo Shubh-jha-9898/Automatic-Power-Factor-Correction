@@ -1,31 +1,34 @@
-# Automatic-Power-Factor-Correction
-Automatic Power Factor Correction (APFC) is a system used in electrical networks to improve power factor (PF) automatically by switching capacitor banks in and out based on real-time load conditions.
+⚡ Power Factor Correction System in MATLAB/Simulink:
+*Welcome to the official repository of my Power Factor Correction (PFC) project, designed and simulated in MATLAB/Simulink. This project showcases an working PF improvement setup using step-wise capacitor switching, built for a 5 MW / 5.8 MVAR load on a 33 kV/6.6 kV transformer.
 
-Add files via upload
-Problem Statement:
- A textile mill in India has a peak demand of 5 MW, with an average power factor of 0.65 lagging. The mill operates 24/7, and the utility company charges a penalty for low power factor. The mill's management wants to improve the power factor to 0.95 or higher to reduce the penalty and minimize energy losses. 
-Current System The mill's electrical distribution system consists of: 
+📌 Project Highlights:
+✅ Load: 5 MW & 5.8 MVAR (inductive)
+✅ Transformer: 33kV/6.6kV
+✅ PF Correction Target: 0.95
+✅ Total Reactive Compensation: Approx- 400 MVAR
+✅ Steps: 6-step capacitor switching
+✅ Logic: Real-time MATLAB Function logic based on PF thresholds
 
-*33 kV supply: The mill receives power from the utility company at 33 kV. 
-*Transformers: Two 5 MVA, 33/6.6 kV transformers step down the voltage to 6.6 kV. 
-*Distribution board: A 6.6 kV distribution board supplies power to various loads, including motors, lighting, and heating systems efficiently and effectively.
+🎯 Objective
+To dynamically correct a low power factor (around 0.65) using automated capacitor switching logic and improve system efficiency while keeping PF near 0.95.
 
+🔧 Tools & Technologies Used:
+*MATLAB 
+*Simulink
+*Power Systems Toolbox
+*MATLAB Function Blocks
+*Scopes & Measurement Blocks
 
-*Calculation of Required Capacitor Bank Rating:
-The goal is to improve the power factor (PF) from 0.65 lagging to 0.95 lagging.
+📊 Results Overview:
+📉 Power Factor Before Correction: Have a Look on the Uploaded Images.
+📈 Power Factor After Correction: Have a Look on the Uploaded Images.
+✅ Result: PF improved from ~0.65 to 0.95 using stepped capacitive compensation.
 
-Given:
-•	Active power (P) = 5 MW = 5000 kW
-•	Initial PF (cosφ₁) = 0.65 → φ₁ = 49.46°, tanφ₁ = 1.169
-•	Desired PF (cosφ₂) = 0.95 → φ₂ = 18.19°, tanφ₂ = 0.329
+🧠 System Architecture:
+🟢 Three-Phase Source (33kV)
+🔄 Transformer (33kV ➝ 6.6kV)
+⚙️ Load (5 MW + 5.8 MVAR)
+🪫 Capacitor Banks (6 steps x  700KVAR)
+📏 Power Measurement at Load Bus
+🧮 MATLAB Function block for capacitor switching
 
-*Reactive Power Calculation:
-•	Initial reactive power (Q₁) = P × tanφ₁ = 5000 × 1.169 = 5845 kVAR
-•	Desired reactive power (Q₂) = P × tanφ₂ = 5000 × 0.329 = 1645 kVAR
-•	Required capacitive kVAR (Qc) = Q₁ - Q₂ = 5845 - 1645 = 4200 kVAR
-
-Existing Capacitor Bank:
-•	Additional kVAR needed: 4200 
-
-*Recommendation:
-Install a new capacitor bank of 4200 kVAR at the 6.6 kV bus.
