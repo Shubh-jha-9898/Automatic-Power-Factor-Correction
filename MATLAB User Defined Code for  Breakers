@@ -1,43 +1,33 @@
 function [step1, step2, step3, step4, step5, step6] = PF_Capacitor_Switching(PF)
-    % Target power factor
-    target_PF = 0.95;
-    
-    % Initialize all steps to OFF (0)
-    step1 = 0;
-    step2 = 0;
-    step3 = 0;
-    step4 = 0;
-    step5 = 0;
-    step6 = 0;
-    
-    % Turn ON capacitors based on PF thresholds
-    if PF < target_PF
-        % Step 1: Always ON if PF < 0.95
-        step1 = 1;
-        
-        % Step 2: ON if PF < 0.90
-        if PF < 0.93
+
+    % Target PF range
+    target_PF_min = 0.90;
+    target_PF_max = 0.96;
+
+    % Initialize all steps OFF
+    step1 = 0; step2 = 0; step3 = 0; 
+    step4 = 0; step5 = 0; step6 = 0;
+
+    % Activate step-by-step if PF is below acceptable range
+    if PF < target_PF_min
+        if PF < 0.95
+            step1 = 1;
+        end
+        if PF < 0.94
             step2 = 1;
         end
-        
-        % Step 3: ON if PF < 0.85
-        if PF < 0.91
+        if PF < 0.93
             step3 = 1;
         end
-        
-        % Step 4: ON if PF < 0.80
-        if PF < 0.89
+        if PF < 0.92
             step4 = 1;
         end
-        
-        % Step 5: ON if PF < 0.75
-        if PF < 0.87
+        if PF < 0.91
             step5 = 1;
         end
-        
-        % Step 6: ON if PF < 0.70
-        if PF < 0.85
+        if PF < 0.90
             step6 = 1;
         end
     end
 end
+
