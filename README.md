@@ -1,4 +1,4 @@
-⚡ Power Factor Correction System in MATLAB/Simulink:
+⚡ Power Factor Correction System in MATLAB/Simulink: [THIS SYSTEM CAN EVEN WORK FOR VARIABLE LOADS]
 
 *Welcome to the official repository of my Power Factor Correction (PFC) project, designed and simulated in MATLAB/Simulink. This project showcases an working PF improvement setup using step-wise capacitor switching, built for a 5 MW / 5.8 MVAR load on a 33 kV/6.6 kV transformer.
 
