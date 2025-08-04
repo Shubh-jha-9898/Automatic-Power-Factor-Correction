@@ -1,6 +1,6 @@
 function [step1, step2, step3, step4, step5, step6] = PF_Capacitor_Switching(PF)
 
-TARGET_PF = 0.98
+TARGET_PF = 0.98;
     % Initialize all steps OFF
     step1 = 0; step2 = 0; step3 = 0; 
     step4 = 0; step5 = 0; step6 = 0;
