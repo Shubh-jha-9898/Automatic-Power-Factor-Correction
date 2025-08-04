@@ -34,7 +34,7 @@ To dynamically correct a low power factor (around 0.65) using automated capacito
 🟢 Three-Phase Source (33kV)
 🔄 Transformer (33kV ➝ 6.6kV)
 ⚙️ Load (5 MW + 5.8 MVAR)
-🪫 Capacitor Banks (6 steps x  700KVAR)
+🪫 Capacitor Banks (6 steps of variable ratings)
 📏 Power Measurement at Load Bus
 🧮 MATLAB Function block for capacitor switching
 
