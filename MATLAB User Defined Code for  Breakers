@@ -1,33 +1,27 @@
 function [step1, step2, step3, step4, step5, step6] = PF_Capacitor_Switching(PF)
 
-    % Target PF range
-    target_PF_min = 0.90;
-    target_PF_max = 0.96;
-
+TARGET_PF = 0.98
     % Initialize all steps OFF
     step1 = 0; step2 = 0; step3 = 0; 
     step4 = 0; step5 = 0; step6 = 0;
 
-    % Activate step-by-step if PF is below acceptable range
-    if PF < target_PF_min
-        if PF < 0.95
-            step1 = 1;
-        end
-        if PF < 0.94
-            step2 = 1;
-        end
-        if PF < 0.93
-            step3 = 1;
-        end
-        if PF < 0.92
-            step4 = 1;
-        end
-        if PF < 0.91
-            step5 = 1;
-        end
-        if PF < 0.90
-            step6 = 1;
-        end
+  if PF < TARGET_PF
+    if PF >= 0.64 
+        step6 = 1;
     end
+    if PF >= 0.77 
+        step5 = 1;
+    end
+    if PF >= 0.85
+        step4 = 1;
+    end
+    if PF >= 0.88 
+        step3 = 1;
+    end
+    if PF >= 0.91 
+        step2 = 1;
+    end
+     if PF >= 0.93 
+        step1 = 1;
+     end
 end
-
